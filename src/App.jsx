@@ -652,25 +652,36 @@ const App = () => {
   ];
   const handleNavClick = () => setNavOpen(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setFormStatus('Sending...');
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setFormStatus('Sending...');
     
-    try {
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-        from_name: formData.name,
-        from_email: formData.email,
-        message: formData.message
-      });
+  //   try {
+  //     await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+  //       from_name: formData.name,
+  //       from_email: formData.email,
+  //       message: formData.message
+  //     });
       
-      setFormStatus('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
-      setTimeout(() => setFormStatus(''), 3000);
-    } catch (error) {
-      setFormStatus('Error sending message. Please try again.');
-      console.error('Email send error:', error);
-    }
-  };
+  //     setFormStatus('Message sent successfully!');
+  //     setFormData({ name: '', email: '', message: '' });
+  //     setTimeout(() => setFormStatus(''), 3000);
+  //   } catch (error) {
+  //     setFormStatus('Error sending message. Please try again.');
+  //     console.error('Email send error:', error);
+  //   }
+  // };
+
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const { name, email, message } = formData;
+
+  const mailtoLink = `mailto:hussanomogbolahan@gmail.com?subject=New Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+
+  window.location.href = mailtoLink;
+};
+
 
   const MobileNavLink = ({ to, children }) => (
     <ScrollLink 
@@ -693,7 +704,7 @@ const App = () => {
           <div className="flex items-center justify-between max-w-6xl px-4 py-4 mx-auto">
             <span className="text-2xl font-bold"></span>
             
-            <div className="items-center hidden space-x-8 md:flex">
+            {/* <div className="items-center hidden space-x-8 md:flex">
               <ScrollLink to="home" smooth={true} className="cursor-pointer">Home</ScrollLink>
               <ScrollLink to="about" smooth={true} className="cursor-pointer">About</ScrollLink>
               <ScrollLink to="projects" smooth={true} className="cursor-pointer">Projects</ScrollLink>
@@ -705,9 +716,9 @@ const App = () => {
               >
                 {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
               </button>
-            </div>
+            </div> */}
 
-            <div className="flex items-center space-x-4 md:hidden">
+            <div className="flex items-center space-x-4 ">
               <button 
                 onClick={() => setDarkMode(!darkMode)}
                 className="p-2"
@@ -726,15 +737,32 @@ const App = () => {
 
         {/* Mobile Menu */}
         {navOpen && (
-          <div className={`fixed inset-0 z-40 pt-16 px-4 space-y-4 ${
-            darkMode ? colors.dark.surface : colors.light.surface
-          }`}>
-            <MobileNavLink to="home">Home</MobileNavLink>
-            <MobileNavLink to="about">About</MobileNavLink>
-            <MobileNavLink to="projects">Projects</MobileNavLink>
-            <MobileNavLink to="contact">Contact</MobileNavLink>
-            <MobileNavLink to="skills">Skills</MobileNavLink>
+
+          <div 
+            className={`
+              fixed top-0 right-0 h-full w-64 z-40 pt-16 px-4 space-y-4
+              ${darkMode ? colors.dark.surface : colors.light.surface}
+              transform transition-transform duration-300 ease-in-out
+              ${navOpen ? 'translate-x-0' : 'translate-x-full'}
+            `}
+          >
+            <MobileNavLink to="home" ><code className=''>Home</code></MobileNavLink>
+            <MobileNavLink to="about"><code>About</code></MobileNavLink>
+            <MobileNavLink to="projects"><code>Projects</code></MobileNavLink>
+            <MobileNavLink to="contact"><code>Contact</code></MobileNavLink>
+            <MobileNavLink to="skills"><code>Skills</code></MobileNavLink>
+            {/* <MobileNavLink to="experience">Experience</MobileNavLink>
+            <MobileNavLink to="testimonials">Certifications</MobileNavLink> */}
           </div>
+          // <div className={`fixed inset-0 z-40 pt-16 px-4 space-y-4 ${
+          //   darkMode ? colors.dark.surface : colors.light.surface
+          // }`}>
+          //   <MobileNavLink to="home">Home</MobileNavLink>
+          //   <MobileNavLink to="about">About</MobileNavLink>
+          //   <MobileNavLink to="projects">Projects</MobileNavLink>
+          //   <MobileNavLink to="contact">Contact</MobileNavLink>
+          //   <MobileNavLink to="skills">Skills</MobileNavLink>
+          // </div>
         )}
 
         {/* Hero Section */}
@@ -745,7 +773,7 @@ const App = () => {
             variants={staggerContainer}
             className="max-w-6xl mx-auto text-center"
           >
-            <motion.h1 variants={fadeInUp} className="mb-6 text-5xl font-bold">
+            <motion.h1 variants={fadeInUp} className="mb-6 font-mono text-5xl font-bold">
             Hello, I'm Ibrahim Hussan
             </motion.h1>
             <motion.p variants={fadeInUp} className="mb-8 text-xl opacity-80">
@@ -788,7 +816,7 @@ const App = () => {
             <motion.h2 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="mb-12 text-3xl font-bold text-center"
+              className="mb-12 font-mono text-3xl font-bold text-center"
             >
               About Me
             </motion.h2>
@@ -811,12 +839,19 @@ const App = () => {
                 <motion.p variants={fadeInUp} className="text-justify opacity-80">
                 As a front-end developer that loves blending creativity with code, I leverage modern technologies such as React, Firebase, and Git to craft user interfaces that are not only visually engaging but also highly functional and efficient. With React, I build dynamic, responsive components that provide seamless user experiences across different devices and screen sizes. Firebase allows me to integrate powerful backend services—such as real-time databases, authentication, and cloud storage , enabling robust and scalable applications without compromising speed or security. Meanwhile, Git plays a crucial role in my development workflow, facilitating smooth version control, collaboration, and continuous integration.
                 </motion.p>
-                <motion.button 
+                {/* <motion.button 
                   variants={fadeInUp}
                   className={`px-6 py-3 text-white ${darkMode ? colors.dark.primary : colors.light.primary} rounded-lg hover:opacity-90`}
                 >
                   CONTACT ME
-                </motion.button>
+                </motion.button> */}
+                <motion.button 
+                variants={fadeInUp}
+                className={`px-6 py-3 text-white ${darkMode ? colors.dark.primary : colors.light.primary} rounded-lg hover:opacity-90`}
+                onClick={() => window.location.href = 'mailto:hussanomogbolahan@gmail.com'}
+              >
+                CONTACT ME
+              </motion.button>
               </motion.div>
             </motion.div>
           </div>
@@ -825,7 +860,7 @@ const App = () => {
         {/* Skills Section */}
         <section id="skills" className="px-4 py-16 ">
           <div className="max-w-6xl mx-auto ">
-            <h2 className="mb-12 text-3xl font-bold text-center">Skills & Expertise</h2>
+            <h2 className="mb-12 font-mono text-3xl font-bold text-center">Skills & Expertise</h2>
             <motion.div 
               className="grid gap-8 md:grid-cols-2 lg:grid-cols-4"
               initial="hidden"
@@ -860,7 +895,7 @@ const App = () => {
         {/* Projects Section */}
         <section id="projects" className="px-4 py-16">
           <div className="max-w-6xl mx-auto">
-            <h2 className="mb-12 text-3xl font-bold text-center">Projects</h2>
+            <h2 className="mb-12 font-mono text-3xl font-bold text-center">Projects</h2>
             <motion.div 
               className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
               variants={staggerContainer}
@@ -897,7 +932,7 @@ const App = () => {
         {/* Testimonials Section */}
         <section className="px-4 py-16">
           <div className="max-w-6xl mx-auto">
-            <h2 className="mb-12 text-3xl font-bold text-center">Testimonials</h2>
+            <h2 className="mb-12 font-mono text-3xl font-bold text-center">Testimonials</h2>
             <div className="grid gap-8 md:grid-cols-2">
               {testimonials.slice(testimonialPage * 2, (testimonialPage + 1) * 2).map((testimonial, index) => (
                 <motion.div
@@ -931,7 +966,7 @@ const App = () => {
         {/* Contact Section */}
         <section id="contact" className="px-4 py-16">
           <div className="max-w-6xl mx-auto">
-            <h2 className="mb-12 text-3xl font-bold text-center">Contact</h2>
+            <h2 className="mb-12 font-mono text-3xl font-bold text-center">Contact</h2>
             <motion.div 
               className="grid gap-8 md:grid-cols-2"
               initial="hidden"
@@ -976,7 +1011,7 @@ const App = () => {
                 variants={fadeInUp}
                 className={`p-6 rounded-xl ${darkMode ? colors.dark.surface : colors.light.surface}`}
               >
-                <h3 className={`mb-6 text-xl font-bold ${darkMode ? colors.dark.accent : colors.light.accent}`}>
+                <h3 className={`mb-6 text-xl font-bold font-mono ${darkMode ? colors.dark.accent : colors.light.accent}`}>
                   Contact Information
                 </h3>
                 <div className="space-y-4">
