@@ -116,6 +116,12 @@ const App = () => {
       links: { preview: 'https://ibb-fitness-app.vercel.app/', code: 'https://ibb-fitness-app.vercel.app/' }
     },
     {
+      title: 'Streaming App',
+      description: 'Lets users whatch trailers of interesting movies.',
+      tech: ['React', 'TMDB APi'],
+      links: { preview: 'https://real-ibb-streams.vercel.app/', code: 'https://real-ibb-streams.vercel.app/' }
+    },
+    {
       title: 'Dilemma game',
       description: 'Lets users select from weird dillema categories, save and share dilemmas on socials.',
       tech: ['React', ' html-to-image', 'PWA' ],
