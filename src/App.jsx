@@ -120,7 +120,7 @@ const App = () => {
       title: 'tictactoe game',
       description: 'A fun web-based tic-tac-toe game built with React.',
       tech: ['React', ' Tailwindcss'],
-      links: { preview: 'https://https://simple-tictactoe-six.vercel.app/', code: 'https://simple-tictactoe-six.vercel.app/' }
+      links: { preview: 'https://simple-tictactoe-six.vercel.app/', code: 'https://simple-tictactoe-six.vercel.app/' }
     }
   ];
 
