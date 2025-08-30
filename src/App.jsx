@@ -264,7 +264,7 @@ const App = () => {
   className="flex justify-center md:w-1/2"
 >
   <motion.img 
-    src="myimg.JPG" 
+    src="/myimg.JPG" 
     alt="Profile" 
     className="w-64 h-96 object-cover rounded-lg shadow-lg border-4 border-gray-300 dark:border-gray-600" 
     whileHover={{ rotate: -20 }} 
