@@ -84,7 +84,7 @@ const App = () => {
    
     {
       title: 'FGBN BANK',
-      description: ' A mobile bank app designed to test javacript funtionality,it can be use for transfer within fgbn bank customer,which is just a dummy bank(still working on it)',
+      description: ' A mobile bank app designed to test javascript funtionality,it can be use for transfer within fgbn bank customer,which is just a dummy bank(still working on it)',
       tech: ['HTML', 'CSS', 'Js', 'Firebase'],
       links: { preview: 'https://fgbn-bank.vercel.app/', code: 'https://fgbn-bank.vercel.app/' }
     },
