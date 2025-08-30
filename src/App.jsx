@@ -97,7 +97,7 @@ const App = () => {
      {
     title: 'DARA HAIR(Ongoing)',
     description: 'E-comerce website where user check products, add to cart, checkout and make payment using paystack test api key',
-    tech: ['Reactjs', 'Firebase', 'TailwindCSS', 'Paystack API'],
+    tech: ['Reactjs', 'Firebase', 'TailwindCSS', 'Redux','Paystack API'],
     links: {
       preview: 'https://dara-hair-website.vercel.app/',
       code: 'https://dara-hair-website.vercel.app/'
