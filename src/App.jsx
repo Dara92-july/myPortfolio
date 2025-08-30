@@ -8,7 +8,7 @@ import { FiGithub, FiLinkedin, FiMail, FiFileText, FiSun, FiMoon } from 'react-i
 
 
 
-// Updated Color Scheme
+//Color Scheme
 const colors = {
   light: {
     background: 'bg-[#fdfdfd]',
@@ -28,7 +28,7 @@ const colors = {
   }
 };
 
-// Animation variants
+// Animation
 const staggerContainer = {
   hidden: { opacity: 0 },
   visible: {
@@ -49,17 +49,17 @@ const App = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [formStatus, setFormStatus] = useState('');
 
-  // Update social links with your actual profiles
+  
   const socialLinks = [
-    { icon: <FiGithub />, url: 'https://github.com/heebraim' },
-    { icon: <FiLinkedin />, url: 'https://linkedin.com/in/ibrahim-hussan-90287a256' },
-    { icon: <FiMail />, url: 'mailto:hussanomogbolahan@gmail.com' },
+    { icon: <FiGithub />, url: 'https://github.com/Dara92-july' },
+    { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/gbemisola-salami-5b4796171' },
+    { icon: <FiMail />, url: 'mailto:salamigbemisola2016@gmail.com' },
   ];
   
     const skills = [
     {
       category: 'Frontend Development',
-      items: ['React', 'React Native(expo)', 'Nextjs','JavaScript', 'HTML', 'CSS', 'Tailwind CSS',]
+      items: ['React','JavaScript', 'HTML', 'CSS', 'Tailwind CSS',]
     },
     {
       category: 'Backend Development',
@@ -81,70 +81,65 @@ const App = () => {
   ];
   
   const projects = [
+   
     {
-      title: 'JUMIA CLONE',
-      description: ' clone of jumia site project',
-      tech: ['HTML', 'CSS', 'Js', 'Swiperjs'],
-      links: { preview: 'https://ibb-jumia-clone.vercel.app/', code: 'https://ibb-jumia-clone.vercel.app/' }
+      title: 'FGBN BANK',
+      description: ' A mobile bank app designed to test javacript funtionality,it can be use for transfer within fgbn bank customer,which is just a dummy bank(still working on it)',
+      tech: ['HTML', 'CSS', 'Js', 'Firebase'],
+      links: { preview: 'https://fgbn-bank.vercel.app/', code: 'https://fgbn-bank.vercel.app/' }
+    },
+       {
+      title: 'Beks tech website/portfolio(Ongoing)',
+      description: ' Designed for a tech solution company where client can contact the company,view projects done by the company and get to know more about them',
+      tech: ['React', 'CSS', 'nodejs', 'nodemailer','expressjs','mongodb'],
+      links: { preview: 'https://www.beks.tech/', code: 'https://www.beks.tech/' }
     },
      {
-    title: 'SBC STORES',
-    description: 'Search products, add to cart, checkout and make payment using paystack test api key',
-    tech: ['HTML', 'Firebase', 'CSS', 'JS', 'Paystack API'],
+    title: 'DARA HAIR(Ongoing)',
+    description: 'E-comerce website where user check products, add to cart, checkout and make payment using paystack test api key',
+    tech: ['Reactjs', 'Firebase', 'TailwindCSS', 'Paystack API'],
     links: {
-      preview: 'https://sbc-stores.vercel.app/',
-      code: 'https://sbc-stores.vercel.app/'
+      preview: 'https://dara-hair-website.vercel.app/',
+      code: 'https://dara-hair-website.vercel.app/'
     }
   },
    
     {
-      title: 'MoodtuneAI',
-      description: 'Listen to music, search artists songs based on your mood and preference.',
-      tech: ['React', 'spotify API ', 'Gemini API'],
-      links: { preview: 'https://moodtunesai.vercel.app/', code: 'https://moodtunesai.vercel.app/' }
+      title: 'Linkedln  Post Generator ',
+      description: 'An app created using gemini ai to generate linkedln post.',
+      tech: ['React', 'Tailwind css','Gemini API'],
+      links: { preview: 'https://linkedln-postgenerator.vercel.app/', code: 'https://linkedln-postgenerator.vercel.app/' }
     },
     {
       title: 'budgetApp',
       description: 'calculate budget , amount spent and balance',
       tech: ['React', 'Tailwind',],
-      links: { preview: 'https://ibbbudget-app.vercel.app/', code: 'https://ibbbudget-app.vercel.app/' }
+      links: { preview: 'https://gbemibudget-app.vercel.app/', code: 'https://gbemibudget-app.vercel.app/' }
     },
     {
-      title: 'Fitness App',
-      description: 'Lets users select from categories of exercises, with various gif illustration to follow.',
-      tech: ['React', 'Rapid APi', 'PWA'],
-      links: { preview: 'https://ibb-fitness-app.vercel.app/', code: 'https://ibb-fitness-app.vercel.app/' }
-    },
-    {
-      title: 'Streaming App',
-      description: 'Lets users whatch trailers of interesting movies.',
-      tech: ['React', 'TMDB APi'],
-      links: { preview: 'https://real-ibb-streams.vercel.app/', code: 'https://real-ibb-streams.vercel.app/' }
-    },
-    {
-      title: 'Dilemma game',
-      description: 'Lets users select from weird dillema categories, save and share dilemmas on socials.',
-      tech: ['React', ' html-to-image', 'PWA' ],
-      links: { preview: 'https://ib-dilemmagame.vercel.app/', code: 'https://ib-dilemmagame.vercel.app/' }
+      title: 'tictactoe game',
+      description: 'A fun web-based tic-tac-toe game built with React.',
+      tech: ['React', ' Tailwindcss'],
+      links: { preview: 'https://https://simple-tictactoe-six.vercel.app/', code: 'https://simple-tictactoe-six.vercel.app/' }
     }
   ];
 
   const testimonials = [
     
-    { text: "Ibrahim is a talented developer...", author: "Ajibola Hassan" },
+    { text: "Gbemisola delivered a smooth and functional bank app. Reliable and easy to work with....", author: "Favour mani" },
     
-    { text: "Good with  problem-solving ...", author: "Gbemisola" },
-    { text: "He has  great communication...", author: "Segun Oladokun" },
-    { text: "i highly recommend him as a developer...", author: " Adeshola" }
+    { text: "Creative, her fullstack skills really impressed me...", author: "Ibrahim Hussein" },
+    { text: "She has  great communication...", author: "Segun Oladokun" },
+    { text: "Gbemisola is creative and reliable. she designed a responsive interface for our portfolio site that perfectly balanced design and functionality....", author: " Chidi Nwakabeyi" }
   ];
   const handleNavClick = () => setNavOpen(false);
 
   const handleSubmit = (e) => {
   e.preventDefault();
-
   const { name, email, message } = formData;
 
-  const mailtoLink = `mailto:hussanomogbolahan@gmail.com?subject=New Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+  const mailtoLink = `mailto:salamigbemisola2016@gmail.com?subject=New Message from ${encodeURIComponent
+  (name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
 
   window.location.href = mailtoLink;
 };
@@ -166,24 +161,15 @@ const App = () => {
       <div className={`${darkMode ? colors.dark.background : colors.light.background} ${
         darkMode ? colors.dark.text : colors.light.text
       }`}>
-        {/* Navigation */}
+           {/* Navigation */}
         <nav className={`fixed w-full z-50 ${darkMode ? colors.dark.surface : colors.light.surface} shadow-sm`}>
           <div className="flex items-center justify-between max-w-6xl px-4 py-4 mx-auto">
-            <span className="text-2xl font-bold"></span>
-            
-            
-
+            <span className="text-2xl font-bold">Gbemisola</span>
             <div className="flex items-center space-x-4 ">
-              <button 
-                onClick={() => setDarkMode(!darkMode)}
-                className="p-2"
-              >
+              <button onClick={() => setDarkMode(!darkMode)} className="p-2">
                 {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
               </button>
-              <button 
-                className="p-2"
-                onClick={() => setNavOpen(!navOpen)}
-              >
+              <button className="p-2" onClick={() => setNavOpen(!navOpen)}>
                 {navOpen ? '✕' : '☰'}
               </button>
             </div>
@@ -221,17 +207,17 @@ const App = () => {
             className="max-w-6xl mx-auto text-center"
           >
             <motion.h1 variants={fadeInUp} className="mb-6 font-mono text-5xl font-bold">
-            Hello, I'm Ibrahim Hussan
+            Hello, I'm Salami Gbemisola
             </motion.h1>
             <motion.p variants={fadeInUp} className="mb-8 text-xl opacity-80">
-             a fullstack developer focused on creating clean, scalable interfaces with modern tools like React, Firebase, and Git.
+             a Full Stack Developer who loves turning ideas into interactive experiences. With React, Node.js, and MongoDB, I build applications that are fast, scalable, and user-focused. Passionate about learning and problem-solving, I thrive on creating solutions that make an impact.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex justify-center mb-12 space-x-4">
               {/* <button className={`px-6 py-3 text-white ${darkMode ? colors.dark.primary : colors.light.primary} rounded-lg hover:opacity-90`}>
                 LET'S TALK
               </button> */}
               <a 
-                href="/ibrahim.pdf"  download target="_blank" rel="noopener noreferrer" 
+                href="/GBEMISOLA.pdf"  download target="_blank" rel="noopener noreferrer" 
               
                 className={`flex items-center px-6 py-3 border-2 ${
                   darkMode ? colors.dark.border : colors.light.border
@@ -273,28 +259,39 @@ const App = () => {
               whileInView="visible"
               variants={staggerContainer}
             >
-              <motion.div 
-                variants={fadeInUp}
-                className="w-full md:w-1/2"
-              >
-                <div className={`h-64 rounded-lg flex justify-center ${darkMode ? 'bg-[#374151]' : 'bg-gray-200'}`}> <img src="myimg.jpg" alt="" className='flex justify-center w-64 h-64 rounded-full' />   </div>
-              </motion.div>
-              <motion.div 
-                variants={staggerContainer}
-                className="w-full space-y-6 md:w-1/2"
-              >
-                <motion.p variants={fadeInUp} className="text-justify opacity-80">
-                As a full stack developer that loves blending creativity with code, I leverage modern technologies such as React,Nextjs, Firebase, and Git to craft user interfaces that are not only visually engaging but also highly functional and efficient. With React and ReactNative(expo), I build dynamic, responsive components that provide seamless user experiences across different devices and screen sizes. MongoDB , Firebase allows me to integrate powerful backend services—such as real-time databases, authentication, and cloud storage , enabling robust and scalable applications without compromising speed or security. Meanwhile, Git plays a crucial role in my development workflow, facilitating smooth version control, collaboration, and continuous integration.
-                </motion.p>
-               
-                <motion.button 
-                variants={fadeInUp}
-                className={`px-6 py-3 text-white ${darkMode ? colors.dark.primary : colors.light.primary} rounded-lg hover:opacity-90`}
-                onClick={() => window.location.href = 'mailto:hussanomogbolahan@gmail.com'}
-              >
-                CONTACT ME
-              </motion.button>
-              </motion.div>
+             <motion.div 
+  variants={fadeInUp}
+  className="flex justify-center md:w-1/2"
+>
+  <motion.img 
+    src="myimg.JPG" 
+    alt="Profile" 
+    className="w-64 h-96 object-cover rounded-lg shadow-lg border-4 border-gray-300 dark:border-gray-600" 
+    whileHover={{ rotate: -20 }} 
+    transition={{ duration: 0.3 }}
+  />
+</motion.div>
+
+
+    <motion.div 
+    variants={staggerContainer}
+    className="md:w-1/2 space-y-6 text-center md:text-left"
+  >
+    <motion.p 
+      variants={fadeInUp} 
+      className="text-justify opacity-80 leading-relaxed"
+    >
+      I am a Full Stack Developer passionate about building scalable, user-friendly, and visually engaging applications. With expertise in Javascript, Reactjs, Node.js, Express, MongoDB, and Firebase, I craft seamless digital experiences from frontend to backend. I love merging creativity with functionality to deliver efficient and impactful solutions.I thrive in collaborative environments, leveraging Git and modern workflows for efficient teamwork and version control.I am committed to continuous learning, problem-solving, and delivering high-quality software solutions. My long-term goal is to grow as a software engineer and contribute to innovative projects that create meaningful impact.
+    </motion.p>
+
+    <motion.button 
+      variants={fadeInUp}
+      className={`px-6 py-3 text-white ${darkMode ? colors.dark.primary : colors.light.primary} rounded-lg shadow-md hover:opacity-90 transition`}
+      onClick={() => window.location.href = 'mailto:salamigbemisola2016@gmail.com'}
+    >
+      CONTACT ME
+    </motion.button>
+  </motion.div>
             </motion.div>
           </div>
         </section>
@@ -492,7 +489,7 @@ const App = () => {
               ))}
             </div>
             <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              © 2025 Ibrahim. All Rights Reserved.
+              © {new Date().getFullYear()} Salami Gbemisola. All Rights Reserved.
             </p>
           </div>
         </footer>
