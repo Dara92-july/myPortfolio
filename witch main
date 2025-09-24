@@ -1,0 +1,9 @@
+[33mcommit e2cb3e44e485b1cdf3f98e5263d11c1d8c804118[m
+Author: Dara92-july <salamigbemisola2016@gmail.com>
+Date:   Sat Aug 30 22:30:12 2025 +0100
+
+    i added a text
+
+ index.html  | 2 [32m+[m[31m-[m
+ src/App.jsx | 2 [32m+[m[31m-[m
+ 2 files changed, 2 insertions(+), 2 deletions(-)

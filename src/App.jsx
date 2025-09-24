@@ -80,49 +80,63 @@ const App = () => {
     }
   ];
   
-  const projects = [
-   
-    {
-      title: 'FGBN BANK',
-      description: ' A mobile bank app designed to test javacript funtionality,it can be use for transfer within fgbn bank customer,which is just a dummy bank(still working on it)',
-      tech: ['HTML', 'CSS', 'Js', 'Firebase'],
-      links: { preview: 'https://fgbn-bank.vercel.app/', code: 'https://fgbn-bank.vercel.app/' }
-    },
-       {
-      title: 'Beks tech website/portfolio(Ongoing)',
-      description: ' Designed for a tech solution company where client can contact the company,view projects done by the company and get to know more about them',
-      tech: ['React', 'CSS', 'nodejs', 'nodemailer','expressjs','mongodb'],
-      links: { preview: 'https://www.beks.tech/', code: 'https://www.beks.tech/' }
-    },
-     {
-    title: 'DARA HAIR(Ongoing)',
-    description: 'E-comerce website where user check products, add to cart, checkout and make payment using paystack test api key',
-    tech: ['Reactjs', 'Firebase', 'TailwindCSS', 'Paystack API'],
-    links: {
-      preview: 'https://dara-hair-website.vercel.app/',
-      code: 'https://dara-hair-website.vercel.app/'
+const projects = [
+  {
+    title: 'FGBN BANK',
+    description: 'A mobile bank app designed to test JavaScript functionality...',
+    tech: ['HTML', 'CSS', 'Js', 'Firebase'],
+    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758730373/fgbnladingpage_aeefk0.png',
+    links: { 
+      preview: 'https://fgbn-bank.vercel.app/'
     }
   },
-   
-    {
-      title: 'Linkedln  Post Generator ',
-      description: 'An app created using gemini ai to generate linkedln post.',
-      tech: ['React', 'Tailwind css','Gemini API'],
-      links: { preview: 'https://linkedln-postgenerator.vercel.app/', code: 'https://linkedln-postgenerator.vercel.app/' }
-    },
-    {
-      title: 'budgetApp',
-      description: 'calculate budget , amount spent and balance',
-      tech: ['React', 'Tailwind',],
-      links: { preview: 'https://gbemibudget-app.vercel.app/', code: 'https://gbemibudget-app.vercel.app/' }
-    },
-    {
-      title: 'tictactoe game',
-      description: 'A fun web-based tic-tac-toe game built with React.',
-      tech: ['React', ' Tailwindcss'],
-      links: { preview: 'https://simple-tictactoe-six.vercel.app/', code: 'https://simple-tictactoe-six.vercel.app/' }
+  {
+    title: 'Beks tech website/portfolio (Ongoing)',
+    description: 'Designed for a tech solution company...',
+    tech: ['React', 'CSS', 'Node.js', 'Nodemailer','Express.js','MongoDB'],
+    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758729377/Screenshot_2025-09-18_140836_omecqc.png',
+    links: { 
+      preview: 'https://www.beks.tech/'
     }
-  ];
+  },
+  {
+    title: 'DARA HAIR (Ongoing)',
+    description: 'E-commerce website with cart, checkout, and Paystack integration.',
+    tech: ['React.js', 'Firebase', 'TailwindCSS', 'Paystack API'],
+    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758729722/dara_imgkj8.png',
+    links: {
+      preview: 'https://dara-hair-website.vercel.app/'
+    }
+  },
+  {
+    title: 'LinkedIn Post Generator',
+    description: 'An app using Gemini AI to generate LinkedIn posts.',
+    tech: ['React', 'Tailwind CSS','Gemini API'],
+    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758729722/linkedln_post_generator_lsyczb.png',
+    links: { 
+      preview: 'https://linkedln-postgenerator.vercel.app/'
+    }
+  },
+  {
+    title: 'Budget App',
+    description: 'Calculate budget, amount spent, and balance.',
+    tech: ['React', 'Tailwind'],
+    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758729722/budget_app_zzan7u.png',
+    links: { 
+      preview: 'https://gbemibudget-app.vercel.app/' 
+    }
+  },
+  {
+    title: 'Tic Tac Toe Game',
+    description: 'A fun web-based tic-tac-toe game built with React.',
+    tech: ['React', 'TailwindCSS'],
+    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758729722/simple_tictactoe_h4tldb.png',
+    links: { 
+      preview: 'https://simple-tictactoe-six.vercel.app/' 
+    }
+  }
+];
+
 
   const testimonials = [
     
@@ -163,18 +177,43 @@ const App = () => {
       }`}>
            {/* Navigation */}
         <nav className={`fixed w-full z-50 ${darkMode ? colors.dark.surface : colors.light.surface} shadow-sm`}>
-          <div className="flex items-center justify-between max-w-6xl px-4 py-4 mx-auto">
-            <span className="text-2xl font-bold">Gbemisola</span>
-            <div className="flex items-center space-x-4 ">
-              <button onClick={() => setDarkMode(!darkMode)} className="p-2">
-                {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
-              </button>
-              <button className="p-2" onClick={() => setNavOpen(!navOpen)}>
-                {navOpen ? '✕' : '☰'}
-              </button>
-            </div>
-          </div>
-        </nav>
+  <div className="flex items-center justify-between max-w-6xl px-4 py-4 mx-auto">
+    
+    {/* Logo */}
+    <a href="#home" className="flex items-center space-x-2">
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 400 100" 
+        className={`h-10 ${darkMode ? "text-[#fbbf24]" : "text-[#d97706]"}`}
+        fill="currentColor"
+      >
+        {/* Icon (stylized D) */}
+        <g>
+          <circle cx="40" cy="50" r="35" stroke="currentColor" strokeWidth="8" fill="none"/>
+          <path d="M40 15 Q70 50 40 85" stroke="currentColor" strokeWidth="8" fill="none"/>
+        </g>
+
+        {/* Text */}
+        <text x="100" y="55" fontFamily="Segoe UI, sans-serif" fontSize="32" fontWeight="700">
+          DaraDev
+        </text>
+        <text x="100" y="85" fontFamily="Segoe UI, sans-serif" fontSize="18" fontWeight="400" opacity="0.8">
+          Solutions
+        </text>
+      </svg>
+    </a>
+
+    {/* Right side (Dark mode + Menu) */}
+    <div className="flex items-center space-x-4">
+      <button onClick={() => setDarkMode(!darkMode)} className="p-2">
+        {darkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
+      </button>
+      <button className="p-2" onClick={() => setNavOpen(!navOpen)}>
+        {navOpen ? '✕' : '☰'}
+      </button>
+    </div>
+  </div>
+</nav>
 
         {/* Mobile Menu */}
         {navOpen && (
@@ -264,9 +303,9 @@ const App = () => {
   className="flex justify-center md:w-1/2"
 >
   <motion.img 
-    src="myimg.JPG" 
+    src="myimg.jpg" 
     alt="Profile" 
-    className="w-64 h-96 object-cover rounded-lg shadow-lg border-4 border-gray-300 dark:border-gray-600" 
+    className="object-cover w-64 border-4 border-gray-300 rounded-lg shadow-lg h-96 dark:border-gray-600" 
     whileHover={{ rotate: -20 }} 
     transition={{ duration: 0.3 }}
   />
@@ -275,11 +314,11 @@ const App = () => {
 
     <motion.div 
     variants={staggerContainer}
-    className="md:w-1/2 space-y-6 text-center md:text-left"
+    className="space-y-6 text-center md:w-1/2 md:text-left"
   >
     <motion.p 
       variants={fadeInUp} 
-      className="text-justify opacity-80 leading-relaxed"
+      className="leading-relaxed text-justify opacity-80"
     >
       I am a Full Stack Developer passionate about building scalable, user-friendly, and visually engaging applications. With expertise in Javascript, Reactjs, Node.js, Express, MongoDB, and Firebase, I craft seamless digital experiences from frontend to backend. I love merging creativity with functionality to deliver efficient and impactful solutions.I thrive in collaborative environments, leveraging Git and modern workflows for efficient teamwork and version control.I am committed to continuous learning, problem-solving, and delivering high-quality software solutions. My long-term goal is to grow as a software engineer and contribute to innovative projects that create meaningful impact.
     </motion.p>
@@ -332,41 +371,71 @@ const App = () => {
         </section>
 
         {/* Projects Section */}
-        <section id="projects" className="px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="mb-12 font-mono text-3xl font-bold text-center">Projects</h2>
-            <motion.div 
-              className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="visible"
-            >
-              {projects.map((project, index) => (
-                <motion.div 
-                  key={index}
-                  variants={fadeInUp}
-                  className={`p-6 rounded-xl ${darkMode ? colors.dark.surface : colors.light.surface}`}
-                >
-                  <h3 className="mb-4 text-xl font-bold">{project.title}</h3>
-                  <p className="mb-4 opacity-80">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech, i) => (
-                      <span key={i} className={`px-3 py-1 text-sm rounded-full ${
-                        darkMode ? 'bg-[#374151]' : 'bg-gray-200'
-                      }`}>
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex space-x-4">
-                    <a   href={project.links.preview}  target="_blank"  rel="noopener noreferrer" className="text-blue-500">Live Demo</a>
-                    <a   href={project.links.code} target="_blank" rel="noopener noreferrer" className="text-blue-500">View Code</a>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+<section id="projects" className="px-4 py-16">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="mb-12 font-mono text-3xl font-bold text-center">Projects</h2>
+    <motion.div 
+      className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="visible"
+    >
+      {projects.map((project, index) => (
+        <motion.div 
+          key={index}
+          variants={fadeInUp}
+          className={`rounded-xl overflow-hidden shadow-md transition-transform hover:scale-105 ${
+            darkMode ? colors.dark.surface : colors.light.surface
+          }`}
+        >
+          {/* Project Screenshot */}
+          <div className="w-full h-48 overflow-hidden">
+            <img 
+              src={project.img} 
+              alt={project.title} 
+              className="object-cover w-full h-full"
+            />
           </div>
-        </section>
+
+          {/* Project Details */}
+          <div className="p-6">
+            <h3 className="mb-3 text-xl font-bold">{project.title}</h3>
+            <p className="mb-4 opacity-80">{project.description}</p>
+
+            {/* Tech Stack */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tech.map((tech, i) => (
+                <span 
+                  key={i} 
+                  className={`px-3 py-1 text-sm rounded-full ${
+                    darkMode ? 'bg-[#374151]' : 'bg-gray-200'
+                  }`}
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* Action Button */}
+            <div className="flex items-center justify-between">
+              <a 
+              href={project.links.preview} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={`font-medium hover:underline ${
+              darkMode ? 'text-[#fbbf24]' : 'text-[#d97706]'
+             }`}
+            >
+              View Project
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</section>
+
 
         {/* Testimonials Section */}
         <section className="px-4 py-16">
