@@ -256,7 +256,7 @@ const projects = [
                 LET'S TALK
               </button> */}
               <a 
-                href="/GBEMISOLA.pdf"  download target="_blank" rel="noopener noreferrer" 
+                href="/GBEMISOLAcv.pdf"  download target="_blank" rel="noopener noreferrer" 
               
                 className={`flex items-center px-6 py-3 border-2 ${
                   darkMode ? colors.dark.border : colors.light.border
