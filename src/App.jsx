@@ -82,81 +82,139 @@ const App = () => {
   
 const projects = [
   {
-    title: 'FGBN BANK',
-    description: 'A mobile bank app designed to test JavaScript functionality...',
-    tech: ['HTML', 'CSS', 'Js', 'Firebase'],
-    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758730373/fgbnladingpage_aeefk0.png',
+    title: 'FGBN Bank - Mobile Banking App',
+    description: 'A full-featured mobile banking application with real-time transaction tracking, user authentication, and account management. Features include fund transfers, transaction history, and Firebase-based user authentication with secure data handling.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Firebase', 'Responsive Design'],
+    highlights: [
+      'Secure user authentication with Firebase',
+      'Real-time transaction updates',
+      'Mobile-first responsive design',
+      'Clean, intuitive banking interface'
+    ],
     links: { 
-      preview: 'https://fgbn-bank.vercel.app/'
+      preview: 'https://fgbn-bank.vercel.app/',
+      github: 'https://github.com/Dara92-july/fgbn-project'
     }
   },
   {
-    title: 'Beks tech website/portfolio (Ongoing)',
-    description: 'Designed for a tech solution company...',
-    tech: ['React', 'CSS', 'Node.js', 'Nodemailer','Express.js','MongoDB'],
-    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758729377/Screenshot_2025-09-18_140836_omecqc.png',
+    title: 'Beks Tech Solutions',
+    description: 'A professional portfolio and services website for a technology solutions company. Features include project showcases, contact form with email integration, and dynamic content management with MongoDB.',
+    tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Nodemailer', 'CSS'],
+    highlights: [
+      'Full-stack application with custom backend',
+      'Email integration for client inquiries',
+      'Database-driven content management',
+      'Professional business presentation'
+    ],
     links: { 
-      preview: 'https://www.beks.tech/'
+      preview: 'https://www.beks.tech/',
+      github: 'https://github.com/nwabekeyi/beksTech-client'
     }
   },
   {
-    title: 'DARA HAIR (Ongoing)',
-    description: 'E-commerce website with cart, checkout, and Paystack integration.',
-    tech: ['React.js', 'Firebase', 'TailwindCSS', 'Paystack API'],
-    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758729722/dara_imgkj8.png',
+    title: 'Dara Hair - E-commerce ',
+    description: 'A complete e-commerce solution featuring product catalog, shopping cart, and Paystack payment integration. Includes order management, product filtering, and responsive design optimized for mobile shopping.',
+    tech: ['React.js', 'Firebase', 'TailwindCSS', 'Paystack API', 'Context API'],
+    highlights: [
+      'Seamless Paystack payment integration',
+      'Shopping cart with persistent storage',
+      'Product catalog with filtering options',
+      'Mobile-optimized checkout flow'
+    ],
     links: {
-      preview: 'https://dara-hair-website.vercel.app/'
+      preview: 'https://dara-hair-website.vercel.app/',
+      github: 'https://github.com/Dara92-july/Dara-Hair-Website'
     }
   },
   {
-    title: 'LinkedIn Post Generator',
-    description: 'An app using Gemini AI to generate LinkedIn posts.',
-    tech: ['React', 'Tailwind CSS','Gemini API'],
-    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758729722/linkedln_post_generator_lsyczb.png',
+    title: 'LinkedIn Post Generator (AI Powered)',
+    description: 'An AI-powered content creation tool that generates professional LinkedIn posts using Gemini AI. Features include tone customization, length control, and copy-to-clipboard functionality for easy sharing.',
+    tech: ['React', 'Tailwind CSS', 'Gemini API', 'REST API'],
+    highlights: [
+      'Integration with Gemini AI API',
+      'Customizable post tone and length',
+      'Real-time content generation',
+      'Clean, professional UI'
+    ],
     links: { 
-      preview: 'https://linkedln-postgenerator.vercel.app/'
+      preview: 'https://linkedln-postgenerator.vercel.app/',
+      github: 'https://github.com/Dara92-july/linkedln-postgenerator'
     }
   },
   {
-    title: 'Budget App',
-    description: 'Calculate budget, amount spent, and balance.',
-    tech: ['React', 'Tailwind'],
-    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758729722/budget_app_zzan7u.png',
+    title: 'Btech Construction - Company Website',
+    description: 'A professional construction company website showcasing completed projects, services, and client communication through WhatsApp integration. Features portfolio gallery, service descriptions, and direct contact functionality.',
+    tech: ['React', 'Tailwind CSS', 'WhatsApp API', 'Responsive Design'],
+    highlights: [
+      'Direct WhatsApp communication integration',
+      'Project portfolio with image gallery',
+      'Service showcase with detailed descriptions',
+      'Fully responsive construction-themed design'
+    ],
     links: { 
-      preview: 'https://gbemibudget-app.vercel.app/' 
+      preview: 'https://btech-alpha.vercel.app/',
+      github: 'https://github.com/Dara92-july/Btech'
     }
   },
   {
     title: 'Tic Tac Toe Game',
-    description: 'A fun web-based tic-tac-toe game built with React.',
-    tech: ['React', 'TailwindCSS'],
-    img: 'https://res.cloudinary.com/dzo14hk18/image/upload/v1758729722/simple_tictactoe_h4tldb.png',
+    description: 'An interactive web-based Tic Tac Toe game with score tracking, game history, and responsive design. Features include player turn indicators, win detection, and game reset functionality.',
+    tech: ['React', 'TailwindCSS', 'Game Logic'],
+    highlights: [
+      'Interactive game with real-time updates',
+      'Score tracking and game history',
+      'Responsive design for all devices',
+      'Clean, engaging user interface'
+    ],
     links: { 
-      preview: 'https://simple-tictactoe-six.vercel.app/' 
+      preview: 'https://simple-tictactoe-six.vercel.app/',
+      github: 'https://github.com/Dara92-july/simple-tictactoe'
     }
   }
 ];
 
-
   const testimonials = [
     
-    { text: "Gbemisola delivered a smooth and functional bank app. Reliable and easy to work with....", author: "Favour mani" },
+    { text: "Gbemisola delivered a smooth and functional bank app. Reliable and easy to work with....", author: "Favour Mani" },
     
     { text: "Creative, her fullstack skills really impressed me...", author: "Ibrahim Hussein" },
-    { text: "She has  great communication...", author: "Segun Oladokun" },
+    { text: "She has  great Communication...", author: "Segun Oladokun" },
     { text: "Gbemisola is creative and reliable. she designed a responsive interface for our portfolio site that perfectly balanced design and functionality....", author: " Chidi Nwakabeyi" }
   ];
   const handleNavClick = () => setNavOpen(false);
 
   const handleSubmit = (e) => {
   e.preventDefault();
+
   const { name, email, message } = formData;
 
-  const mailtoLink = `mailto:salamigbemisola2016@gmail.com?subject=New Message from ${encodeURIComponent
-  (name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+  if (!name || !email || !message) return;
+
+  const subject = `Portfolio Contact from ${name}`;
+
+  const body = `
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}
+  `;
+
+  const mailtoLink = `mailto:salamigbemisola2016@gmail.com?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
 
   window.location.href = mailtoLink;
+
+  setFormStatus('Opening your email…');
+
+  setFormData({
+    name: '',
+    email: '',
+    message: '',
+  });
 };
+
 
 
   const MobileNavLink = ({ to, children }) => (
@@ -177,14 +235,14 @@ const projects = [
       }`}>
            {/* Navigation */}
         <nav className={`fixed w-full z-50 ${darkMode ? colors.dark.surface : colors.light.surface} shadow-sm`}>
-  <div className="flex items-center justify-between max-w-6xl px-4 py-4 mx-auto">
-    
-    {/* Logo */}
-    <a href="#home" className="flex items-center space-x-2">
-      <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        viewBox="0 0 400 100" 
-        className={`h-10 ${darkMode ? "text-[#fbbf24]" : "text-[#d97706]"}`}
+    <div className="flex items-center justify-between max-w-6xl px-4 py-4 mx-auto">
+      
+      {/* Logo */}
+      <a href="#home" className="flex items-center space-x-2">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 400 100" 
+          className={`h-10 ${darkMode ? "text-[#fbbf24]" : "text-[#d97706]"}`}
         fill="currentColor"
       >
         {/* Icon (stylized D) */}
@@ -249,14 +307,14 @@ const projects = [
             Hello, I'm Salami Gbemisola
             </motion.h1>
             <motion.p variants={fadeInUp} className="mb-8 text-xl opacity-80">
-             a Full Stack Developer who loves turning ideas into interactive experiences. With React, Node.js, and MongoDB, I build applications that are fast, scalable, and user-focused. Passionate about learning and problem-solving, I thrive on creating solutions that make an impact.
+             A full-stack JavaScript developer focused on building fast, scalable, and user-centered web applications using React, Vanillajs and Node.js
             </motion.p>
             <motion.div variants={fadeInUp} className="flex justify-center mb-12 space-x-4">
               {/* <button className={`px-6 py-3 text-white ${darkMode ? colors.dark.primary : colors.light.primary} rounded-lg hover:opacity-90`}>
                 LET'S TALK
               </button> */}
               <a 
-                href="/GBEMISOLAcv.pdf"  download target="_blank" rel="noopener noreferrer" 
+                href="/SalamiGbemisolacv.pdf"  download target="_blank" rel="noopener noreferrer" 
               
                 className={`flex items-center px-6 py-3 border-2 ${
                   darkMode ? colors.dark.border : colors.light.border
@@ -320,7 +378,14 @@ const projects = [
       variants={fadeInUp} 
       className="leading-relaxed text-justify opacity-80"
     >
-      I am a Full Stack Developer passionate about building scalable, user-friendly, and visually engaging applications. With expertise in Javascript, Reactjs, Node.js, Express, MongoDB, and Firebase, I craft seamless digital experiences from frontend to backend. I love merging creativity with functionality to deliver efficient and impactful solutions.I thrive in collaborative environments, leveraging Git and modern workflows for efficient teamwork and version control.I am committed to continuous learning, problem-solving, and delivering high-quality software solutions. My long-term goal is to grow as a software engineer and contribute to innovative projects that create meaningful impact.
+    I am a full-stack developer focused on building reliable, scalable, and user-centered web applications. I work across the stack using JavaScript, React, Node.js, Express, MongoDB, and Firebase to turn ideas into functional products.
+
+    I enjoy solving real-world problems through clean code, thoughtful architecture, and intuitive user interfaces. I have hands-on experience collaborating in team environments, using Git and modern development workflows to ship features efficiently.
+
+    I’m continuously learning, open to feedback, and motivated by opportunities to grow as a software engineer while contributing to products that create real impact.
+
+
+
     </motion.p>
 
     <motion.button 
@@ -388,17 +453,10 @@ const projects = [
             darkMode ? colors.dark.surface : colors.light.surface
           }`}
         >
-          {/* Project Screenshot */}
-          <div className="w-full h-48 overflow-hidden">
-            <img 
-              src={project.img} 
-              alt={project.title} 
-              className="object-cover w-full h-full"
-            />
-          </div>
+         
 
           {/* Project Details */}
-          <div className="p-6">
+          <div className="flex flex-col h-full p-6">
             <h3 className="mb-3 text-xl font-bold">{project.title}</h3>
             <p className="mb-4 opacity-80">{project.description}</p>
 
@@ -417,7 +475,7 @@ const projects = [
             </div>
 
             {/* Action Button */}
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between mt-auto">
               <a 
               href={project.links.preview} 
               target="_blank" 
@@ -428,6 +486,21 @@ const projects = [
             >
               View Project
               </a>
+              {project.links.github && (
+                <a 
+                  href={project.links.github}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`px-4 py-2 rounded-lg font-medium flex items-center ${
+                    darkMode 
+                      ? 'border border-[#4b5563] hover:bg-[#374151]' 
+                      : 'border border-gray-300 hover:bg-gray-100'
+                  } transition-colors`}
+                >
+                  <FiGithub className="mr-2" />
+                  Code
+                </a>
+              )}
             </div>
           </div>
         </motion.div>
@@ -506,12 +579,15 @@ const projects = [
                     className={`w-full h-32 p-3 rounded-lg ${darkMode ? 'bg-[#2c2c2c] border-[#374151]' : 'bg-white border-[#e5e7eb]'} border`}
                     required
                   />
-                  <button 
+                  <button
                     type="submit"
-                    className={`w-full py-3 rounded-lg ${darkMode ? colors.dark.primary : colors.light.primary} text-white`}
+                    className={`w-full py-3 rounded-lg ${
+                      darkMode ? colors.dark.primary : colors.light.primary
+                    } text-white`}
                   >
-                    {formStatus || 'SEND MESSAGE'}
+                    {formStatus || 'Send Message →'}
                   </button>
+
                 </form>
               </motion.div>
 
