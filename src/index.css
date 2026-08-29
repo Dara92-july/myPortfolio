@@ -2,37 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-.movie-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  body {
+    @apply font-sans antialiased bg-paper text-ink dark:bg-ink dark:text-white transition-colors duration-300;
+  }
+
+  ::selection {
+    @apply bg-accent-soft/20 text-ink dark:text-white;
+  }
 }
 
-.movie-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
+@layer components {
+  .container-x {
+    @apply max-w-6xl mx-auto px-5 sm:px-8;
+  }
 
-.movie-card:hover img {
-  transform: scale(1.05);
-}
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-eyebrow text-accent;
+  }
 
-.movie-details {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
+  .section-title {
+    @apply font-display text-4xl sm:text-5xl font-semibold leading-tight;
+  }
 
-.play-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background: red;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 20px;
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-transform duration-200 hover:scale-[1.03] hover:bg-accent-soft active:scale-95 focus:outline-none focus:ring-2 focus:ring-accent-soft focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 px-6 py-3 text-sm font-medium transition hover:border-ink/40 dark:border-white/20 dark:hover:border-white/50;
+  }
 }
