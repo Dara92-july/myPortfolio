@@ -37,7 +37,7 @@ export default function Navbar() {
         <button
           onClick={() => go('home')}
           aria-label="Back to top"
-          className="text-accent transition-opacity hover:opacity-80 dark:text-accent-glow"
+          className="text-accent transition-opacity hover:opacity-80"
         >
           <Logo />
         </button>
