@@ -80,7 +80,7 @@ export default function Hero() {
           <div className="relative mx-auto max-w-sm">
             <div className="absolute -inset-3 rounded-3xl border border-ink/10 dark:border-white/10" />
             <img
-              src="/myimg.jpg"
+              src="https://res.cloudinary.com/dzo14hk18/image/upload/v1788949599/omodara_corporate_znpncw.png"
               alt="Salami Gbemisola"
               className="relative aspect-[4/5] w-full rounded-3xl object-cover shadow-xl"
             />
