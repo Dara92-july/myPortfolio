@@ -90,7 +90,7 @@ export default function Contact() {
             </button>
 
             {status === STATUS.SUCCESS && (
-              <p className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
+              <p className="flex items-center gap-2 text-sm text-accent">
                 <FiCheck /> {message}
               </p>
             )}
