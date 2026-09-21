@@ -35,7 +35,7 @@ export const skills = [
   },
   {
     category: 'Backend Development',
-    items: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Sequelize', 'WebSockets', 'Postman', 'API Documentation', 'CRUD', 'MVC'],
+    items: ['Node.js', 'Express', 'MongoDB', 'SQL', 'Sequelize', 'WebSockets', 'Postman', 'API Documentation', 'CRUD', 'MVC'],
   },
   {
     category: 'React UI Libraries',
