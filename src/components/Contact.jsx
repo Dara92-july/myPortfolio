@@ -29,9 +29,7 @@ export default function Contact() {
     setMessage('');
 
     emailjs
-      .sendForm(EMAILJS.serviceId, EMAILJS.templateId, formRef.current, {
-        publicKey: EMAILJS.publicKey,
-      })
+      .sendForm(EMAILJS.serviceId, EMAILJS.templateId, formRef.current, EMAILJS.publicKey)
       .then(() => {
         setStatus(STATUS.SUCCESS);
         setMessage("Thanks! Your message has been sent — I'll reply soon.");
