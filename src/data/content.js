@@ -148,8 +148,8 @@ export const projects = [
       'Dockerized deployment on Vercel + Render',
     ],
     links: {
-      preview: '',
-      github: '',
+      preview: 'https://smartlogisticsclient.vercel.app',
+      github: 'https://github.com/Dara92-july/smart_logistics_client.git',
     },
   },
   {
