@@ -120,6 +120,39 @@ export const projects = [
     },
   },
   {
+    title: 'Decozone Website',
+    description:
+      'A modern, responsive furniture interior website built with React 18, TypeScript, and Tailwind CSS. Features smooth animations, elegant icons, and EmailJS integration for contact form functionality. Designed with a focus on performance, accessibility, and visual appeal.',
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Lucide React', 'EmailJS'],
+    highlights: [
+      'Modern responsive furniture interior design',
+      'Smooth animations with Framer Motion',
+      'EmailJS contact form integration',
+      'Performance and accessibility focused',
+    ],
+    links: {
+      preview: 'https://decozone.com.ng',
+      github: 'https://github.com/Dara92-july/deco.git',
+    },
+  },
+  {
+    title: 'Smart Logistics',
+    description:
+      'An AI-powered dispatch platform for modern fleet management. Optimize routes, track deliveries, and monitor performance in real time with real-time maps, analytics dashboards, and PWA support.',
+    tech: ['React 18', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'PostgreSQL', 'Socket.IO', 'Leaflet', 'Chart.js', 'Zustand', 'Docker'],
+    highlights: [
+      'Real-time delivery tracking with Socket.IO and Leaflet maps',
+      'Route optimization and fleet performance analytics',
+      'JWT authentication with role-based access',
+      'PWA support for offline access',
+      'Dockerized deployment on Vercel + Render',
+    ],
+    links: {
+      preview: '',
+      github: '',
+    },
+  },
+  {
     title: 'LinkedIn Post Generator (AI)',
     description:
       'An AI-powered content creation tool that generates professional LinkedIn posts using Gemini AI. Features tone customization, length control, and copy-to-clipboard functionality for easy sharing.',
